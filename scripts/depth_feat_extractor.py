@@ -24,7 +24,7 @@ WIDTH=640
 HEIGHT=480
 VFOV=60
 GPU_ID = 1
-vpids = np.load('viewpointIds.npy')
+vpids = np.load('data/viewpointIds.npy')
 
 def normalizaiton(img):
     _range = np.max(img)-np.min(img)
