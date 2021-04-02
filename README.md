@@ -119,7 +119,7 @@ CUDA_VISIBLE_DEVICES=2 python  r2r_src/train.py --agent_type dg --adaIn_type cha
 
 
 ### validation
-validate the model on the validation dataset. The result will be print out.
+validate the model on the validation dataset. The result will be print out. The trained model can be downloaded from [here](https://drive.google.com/file/d/1EYGlT9uonY2MgY1giiJR4updRXKXbvXF/view?usp=sharing)
 ```bash
 CUDA_VISIBLE_DEVICES=2 python  r2r_src/train.py --agent_type dg --adaIn_type channel --attn soft --train validlistener --submit \
 --load snap/shift5_dga_sigmoid_vl3_ml2_fine/state_dict/best_val_unseen \
@@ -135,7 +135,7 @@ CUDA_VISIBLE_DEVICES=2 python  r2r_src/train.py --agent_type dg --adaIn_type cha
 --selfTrain --aug tasks/R2R/data/aug_paths.json --speaker snap/speaker/state_dict/best_val_unseen_bleu \
 --pretrain_model_name ./pretrained_hug_models/dicadd/checkpoint-12864 \
 --angleFeatSize 128 --accumulateGrad --featdropout 0.4 --feedback sample --subout max --optim rms --lr 0.000002 \
---iters 50000 --maxAction 35 --encoderType Dic --batchSize 2 --include_vision True --use_dropout_vision True \
+--iters 30000 --maxAction 35 --encoderType Dic --batchSize 2 --include_vision True --use_dropout_vision True \
 --d_enc_hidden_size 1024 --critic_dim 1024 --name shift5_dga_sigmoid_vl3_ml2_fine
 ```
 
